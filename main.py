@@ -1,5 +1,7 @@
 from keep_alive import keep_alive
 keep_alive()
+import os
+from dotenv import load_dotenv
 
 # Aqui entra o código do teu bot
 # Exemplo com Discord:
@@ -19,5 +21,6 @@ async def ping(ctx):
 # Mantém o bot online no Replit
 keep_alive()
 
-# Token do teu bot
-bot.run("MTM1OTMwOTkxNDg3ODUwOTA3Ng.G1XnGx.jj2m6KIHHtUZ-5I-dr-0BGEtuWKwlSU7k4nhkI")
+load_dotenv()
+token = os.getenv("TOKEN")
+
